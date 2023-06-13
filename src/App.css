@@ -3,3 +3,85 @@
   padding: 0;
   margin: 0;
 }
+.main_container{
+  width: 100%;
+ height:65px;
+ background-color: #3ef8f8;
+ position: sticky;
+ top: 0;
+ z-index: 999;
+ 
+ border-bottom:3px solid rgb(45, 31, 236);
+ }
+.searchinput {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+}
+
+.header_conatiner {
+  height: 100%;
+padding: 0 25px;
+display: flex;
+overflow: hidden;
+
+align-items: center;
+justify-content: space-between;
+
+}
+.searchheader{
+  display: flex;
+align-items: center;
+justify-content:center;
+cursor: pointer;
+}
+.left_header{
+display: flex;
+align-items: center;
+justify-content:left;
+}
+
+.right_header{
+display: flex;
+align-items: center;
+cursor: pointer;
+margin-right: 10px;
+width: 160px;
+
+height: 35px;
+border-radius: 50px;
+}
+.search_btn{
+  padding:8px;
+  background-color: orangered;
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.search_btn:hover{
+  background-color: rgb(216, 60, 4);
+}
+.logo{
+  color: rgb(196, 2, 147);
+  font-weight: 800;
+  font-size: 23px;
+}
+
+
+/* Side bar css */
+.side-bar{
+
+
+  flex: 1;
+  background-color: rgb(238, 36, 36);
+  height: 100vh;
+  position: sticky;
+  top: 45px;
+}
+.idebar-container{
+  display: flex;
+}
