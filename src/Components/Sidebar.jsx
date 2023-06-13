@@ -4,7 +4,7 @@ function Sidebar() {
   return (
   
     <div className="side-bar">
-effgdfug
+     <h3 className='filter_heading'> Select Products</h3>
     </div>
   )
 }

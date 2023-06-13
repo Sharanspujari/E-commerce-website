@@ -23,7 +23,7 @@ function Header() {
          <div className="carticon_container">
             {/* <MdAddShoppingCart className="icon" onClick={onclick} /> */}
             <button className='search_btn'>Cart</button>
-            <span className="total-notifications">4</span>
+            <span className="total-notifications">{}</span>
           </div> 
 
         </div>
