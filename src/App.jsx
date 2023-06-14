@@ -15,7 +15,7 @@ function App() {
     
 
      <div className='sidebar-container'>
-    <Sidebar/>
+    {/* <Sidebar/> */}
     <Products/>
      </div>
      
