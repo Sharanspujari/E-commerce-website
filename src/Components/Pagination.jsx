@@ -9,11 +9,11 @@ function Pagination({totolPages,productsPerPage,setCurrentPage}) {
   }
 
   return (
-    <div>
+    <div className="pagination_div">
    {
     pageNumber.map(number => {
           return (
-            <button key={number} onClick={()=>setCurrentPage(number)}>
+            <button className='btnpagi' key={number} onClick={()=>setCurrentPage(number)}>
               {number}
             </button>
           )

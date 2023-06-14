@@ -1,6 +1,7 @@
-import React from 'react'
-
+import React,{useContext} from 'react'
+// import { ProductContext } from './Products';
 function ProductsLists({product}) {
+    // const { filteredProducts } = useContext(ProductContext);
 
   return (
   <>
@@ -13,7 +14,7 @@ function ProductsLists({product}) {
               <h3>{item.title}</h3>
             
               <p>Price : ₹{item.price}</p>
-              <button className='cartbtn'>Add to cart</button>
+              <button className='cartbtn'>Add </button>
         
           </div> 
           )

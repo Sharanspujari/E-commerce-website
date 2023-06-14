@@ -1,6 +1,6 @@
 import React, { useState, useEffect ,createContext} from "react";
 
-export const ProductContext = createContext();
+// export const ProductContext = createContext();
 
 
 import axios from "axios";
@@ -20,6 +20,7 @@ function Products({children}) {
       const response = await axios.get(URL);
       // console.log(response.data)
       setProduct(response.data);
+      setSearchProduct(response.data)
     } catch (error) {
       console.log(error);
     }
@@ -31,14 +32,14 @@ function Products({children}) {
   console.log(products);
 
 
-  const handleSearch = (term) => {
-    setSearchTerm(term);
-  };
+  // const handleSearch = (term) => {
+  //   setSearchProduct(term);
+  // };
 
-  const filteredProducts = products.filter((product) =>
-  product.title.toLowerCase().includes(searchProduct.toLowerCase())
-);
-
+//   const filteredProducts = products.filter((product) =>
+//   product.title.toLowerCase().includes(searchProduct.toString().toLowerCase())
+// );
+// console.log('filteredProducts:',filteredProducts)
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(
@@ -48,16 +49,18 @@ function Products({children}) {
 
   return (
     <>
-      <ProductContext.Provider
-      value={{ products, filteredProducts, searchProduct, handleSearch }}
-    >
-      {children}
+    
+   
       <div className="card_container">
-
+          <div className="products_list">
         <ProductsLists product={currentProducts} />
-        <div>  <Pagination totolPages={products.length} productsPerPage={productsPerPage} setCurrentPage={setCurrentPage}/></div>
+        </div>
+
+        <div > 
+       <Pagination className="pagination" totolPages={products.length} productsPerPage={productsPerPage} setCurrentPage={setCurrentPage}/>
+       </div>
       </div>
-      </ProductContext.Provider>
+     
     
     </>
   );
