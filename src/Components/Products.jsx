@@ -46,18 +46,35 @@ function Products({children}) {
     indexOfFirstProduct,
     indexOfLastProduct
   );
+  const pageNumber=[];
 
+  for(let i =1; i<=Math.ceil(products.length/productsPerPage); i++){
+    pageNumber.push(i)
+    console.log(pageNumber);
+  }
   return (
     <>
     
    
       <div className="card_container">
           <div className="products_list">
-        <ProductsLists product={currentProducts} />
+        <ProductsLists product={currentProducts} currentProducts={currentProducts} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
         </div>
 
         <div > 
-       <Pagination className="pagination" totolPages={products.length} productsPerPage={productsPerPage} setCurrentPage={setCurrentPage}/>
+       {/* <Pagination className="pagination" totolPages={products.length} productsPerPage={productsPerPage} setCurrentPage={setCurrentPage}/> */}
+       <div className="pagination_div">
+   {
+    pageNumber.map(number => {
+          return (
+            <button className='btnpagi' key={number} onClick={()=>setCurrentPage(number)}>
+              {number}
+            </button>
+          )
+        })
+   }
+    </div>
+       
        </div>
       </div>
      

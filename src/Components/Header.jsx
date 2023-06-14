@@ -1,10 +1,11 @@
 import React,{useState,useEffect,useContext} from 'react'
 // import {AiOutlineSearch,MdAddShoppingCart} from 'react-icons/ti'
 // import { ProductContext } from './Products';
-function Header() {
+function Header({value,onChange}) {
     // const { searchProduct, setSearchProduct } = useContext(ProductContext);
     // const {filteredProducts}=useContext(ProductContext)
-  return (
+ 
+    return (
     <div className='main_container'>
     <div className='header_conatiner'>
 
@@ -13,12 +14,12 @@ function Header() {
   </div>
 
   <div className="searchheader">
-          <input className="searchinput"   
+          <input className="searchinput"  value={value} onChange={onChange.bind(this)}  
        placeholder="Search Products..." type="text" />
           <span>
             {" "}
             {/* <AiOutlineSearch className="headersearch" /> */}
-            <button className='search_btn' >Search </button>
+           
           </span>
         </div>
 
