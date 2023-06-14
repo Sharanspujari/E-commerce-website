@@ -1,6 +1,7 @@
 import React,{useState,useEffect,useContext} from 'react'
 // import {AiOutlineSearch,MdAddShoppingCart} from 'react-icons/ti'
 // import { ProductContext } from './Products';
+import {FaShoppingCart} from 'react-icons/fa'
 function Header({value,onChange}) {
     // const { searchProduct, setSearchProduct } = useContext(ProductContext);
     // const {filteredProducts}=useContext(ProductContext)
@@ -26,8 +27,8 @@ function Header({value,onChange}) {
         <div className='right_header'>
          <div className="carticon_container">
             {/* <MdAddShoppingCart className="icon" onClick={onclick} /> */}
-            <button className='search_btn'>Cart</button>
-            <span className="total-notifications">{}</span>
+            <FaShoppingCart className='cart_icon'/>
+            <span className="total-notifications">{4}</span>
           </div> 
 
         </div>
